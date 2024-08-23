@@ -7,6 +7,7 @@ editor: visual
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+library(mouserat)
 ```
 
 ```{r}
@@ -20,5 +21,12 @@ ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
         panel.grid.major = element_line(color = "cyan"),
         panel.grid.minor = element_line(color = "blue"))
 ```
+
+```{r}
+ggplot(data = penguins, aes(flipper_length_mm, y= body_mass_g)) +
+  geom_point() +
+  theme_eighties()
+```
+
 
 
